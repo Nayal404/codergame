@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Coder And Bugs - JS Game By Om Sunar</title>
+</head>
+<body>
+    <div class="game">
+        <button id="songPlay">Play Music <i class="fa fa-play"></i></button>
+        <h1 id="gameOver" align="center">Coder Vs Bugs - A Game By Om Sunar</h1>
+        <div class="playa"></div>
+        <div id="scoreCount">Score: 0</div>
+        <div class="bugs playb"></div>
+    </div>
+    <footer>
+        <p align="center">Copyright &copy; By Om Sunar</p>
+    </footer>
+</body>
+<script>
+    const btn = document.getElementById('songPlay');
+    btn.onclick = ()=>{
+        const audio = new Audio('sounds/bgSong.mp3');
+        audio.play();
+        btn.style.display = 'none';
+    }
+</script>
+<script src="js/gameLogic.js"></script>
+</html>
